@@ -13,6 +13,7 @@ body
     display: flex;
     flex-wrap: wrap;
 }
+
 /* Mobile first queries */
 
 /* Larger than mobile */
@@ -22,6 +23,8 @@ header
     width: 94vw;
     margin: 2%;
     display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
     align-items: left;
     justify-content: left;
 }
@@ -29,7 +32,7 @@ main
 {
     width: 94vw;
     margin: 2%;
-    display: flex;
+    display: flexbox;
     align-items: center;
     justify-content: center;
 }
@@ -37,7 +40,7 @@ main
 {
     width: 3em;
     height: auto;
-    margin-right: 25%;
+    margin-right: 20%;
 }
 .soft-black
 {
@@ -48,41 +51,97 @@ main
     width: 20vw;
     height: auto;
 }
+#questionMark img
+{
+    width:10VW;
+    height: auto;
+    padding: 1%;
+    margin: 25% 0 0 165%;
+    border-radius: 50%;
+}
 .containers
 {
     width: 100vw;
-    display: flex;
+    padding: 3%;
     align-items: center;
     justify-content: center;
 }
-.images
+.video-images
 {
     width: 86vw;
     height: auto;
 }
 .drop-shadow
 {
-    box-shadow: 0.2em 0.2em 10px #bbbbbb;
+    box-shadow: 0.2em 0.2em 15px #bbbbbb;
+    border-radius: 5%;
 }
 #frontpageCamera
 {
-    border-radius: 5%;
     border: #969696;
 }
 button
 {
-    width: 1em;
+    width: auto;
     height: auto;
     margin: 1%;
+    padding: 2%;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5%;
 }
-.button-box
+.button-with-shadow
 {
-    width: 4em;
-    height: auto;
-    margin: 1%;
-    border-radius: 0.2em;
+    width: 3em;
+    height: 3em;
+    margin: 1% 2% 1% 4%;  
 } 
-
+.button-shadow-color-pink
+{
+    box-shadow: 0 0 0.5em #F703FF;
+    border-radius:5%;
+}
+.button-shadow-color-yellow
+{
+    box-shadow: 0 0 0.5em #ffcd05;
+    border-radius:5%;
+}
+.button-shadow-color-green
+{
+    box-shadow: 0 0 0.5em #22b102;
+    border-radius:5%;
+}
+.button-shadow-color-blue
+{
+    box-shadow: 0 0 0.5em #75bae8;
+    border-radius:5%;
+}
+.button-shadow-color-orange
+{
+    box-shadow: 0 0 0.5em #FF3F02;
+    border-radius:5%;
+}
+.boligBox
+{
+    width: 86vw;
+    min-height: 18vh;
+    padding: 1%;
+    display: flex;
+}
+.infoName 
+{
+    margin: 3%;
+}
+.infoResults
+{
+    margin: 3% 0 0 34%;
+}
+.lockButtons
+{
+    width: 18%;
+    height: auto;
+    margin: 0 6%;
+}
 
 }
 
