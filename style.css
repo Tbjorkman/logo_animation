@@ -1,3 +1,6 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 *
 {
     box-sizing: border-box;
@@ -7,4 +10,90 @@
 body
 {
     font-family: "Eurostyle" url("assets/EuroStyle_Normal.ttf");
+    display: flex;
+    flex-wrap: wrap;
 }
+/* Mobile first queries */
+
+/* Larger than mobile */
+@media (max-width: 400px) {
+header 
+{
+    width: 94vw;
+    margin: 2%;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+main
+{
+    width: 94vw;
+    margin: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.burger_menu
+{
+    width: 3em;
+    height: auto;
+    margin-right: 25%;
+}
+.soft-black
+{
+    background-color: #1b1b1b;
+}
+#logo img
+{
+    width: 20vw;
+    height: auto;
+}
+.containers
+{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.images
+{
+    width: 86vw;
+    height: auto;
+}
+.drop-shadow
+{
+    box-shadow: 0.2em 0.2em 10px #bbbbbb;
+}
+#frontpageCamera
+{
+    border-radius: 5%;
+    border: #969696;
+}
+button
+{
+    width: 1em;
+    height: auto;
+    margin: 1%;
+}
+.button-box
+{
+    width: 4em;
+    height: auto;
+    margin: 1%;
+    border-radius: 0.2em;
+} 
+
+
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
