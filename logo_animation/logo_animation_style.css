@@ -8,11 +8,23 @@ body
 {
     font-family: url('assets/EuroStyle_Normal.ttf');
 }
-
-.cls-2
+main
+{
+  width: 100vw;
+  height:100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logoContent
+{
+  width: 30vw;
+  height: auto;
+}
+.cls-1
 {
   fill:none;
-  stroke-width:65px;
+  stroke-width:90px;
 }
 #house_roof
 {
@@ -91,7 +103,7 @@ body
 #companyName
 {
   opacity: 0;
-  animation: opacityShow 0.2s ease-in-out 3.8s forwards;
+  animation: opacityShow 0.4s ease-in-out 3.8s forwards;
 }
 @keyframes opacityShow
 {
@@ -104,7 +116,7 @@ body
     opacity: 1;
   }
 }
-.cls-2,.cls-3
+.cls-1,.cls-3
 {
   stroke:#4ccbe0;
   stroke-miterlimit:10;
@@ -112,11 +124,6 @@ body
 .cls-3,.cls-4,.cls-5
 {
   fill:#4ccbe0;
-}
-.cls-5
-{
-  font-size:400px;
-  font-family:EuroStyleNormal, EuroStyle;
 }
 
 /*@import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700,300);
