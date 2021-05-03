@@ -9,10 +9,12 @@
 }
 body
 {
-    font-family: "Eurostyle" url("assets/EuroStyle_Normal.ttf");
+    font-family: 'Exo', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-wrap: wrap;
 }
+
 
 /* Mobile first queries */
 
