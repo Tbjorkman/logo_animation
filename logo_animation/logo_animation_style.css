@@ -26,28 +26,11 @@ main
   fill:none;
   stroke-width:90px;
 }
-#house_roof
-{
-   stroke-dasharray: 1800;
-   stroke-dashoffset: 1800;
-   animation: runLineRoof 1s ease-in forwards;
-}
-@keyframes runLineRoof
-{
-  from
-  { 
-    stroke-dashoffset: 1800;
-  }
-  to
-  {
-      stroke-dashoffset:0;
-  }
-} 
 #house_frame
 {
   stroke-dasharray: 2500;
    stroke-dashoffset: 2500;
-   animation: runLineHouse 1.2s ease-out 1s forwards;
+   animation: runLineHouse 1.2s ease-out forwards;
 }
 @keyframes runLineHouse
 {
@@ -58,6 +41,35 @@ main
   to
   {
       stroke-dashoffset:0;
+  }
+} 
+#box
+{
+  height: 10rem;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+#house_roof
+{
+  position: absolute;
+  top: 5rem;
+  opacity: 0;
+  animation: topFadeIn 1s 1.5s forwards;
+}
+@keyframes topFadeIn
+{
+  0%
+  { 
+    position: absolute;
+    top: -10rem;
+    opacity: 0;
+  }
+  100%
+  {
+      position: absolute;
+      top: 25%;
+      opacity: 1;
   }
 } 
 #one_bulb_line
@@ -78,8 +90,17 @@ main
 #lightbulb
 {
   opacity: 0;
-  animation: opacityShow 0.2s ease-in-out 2.8s forwards;
+  transform-origin: center;
+  animation: opacityShow 0.2s ease-in-out 2.8s forwards, light_blink 1s ease-in-out 2.9s;
 }
+@keyframes light_blink
+{
+  to 
+  {
+    transform: scale(1.1);
+  }
+}
+
 #wifi_center
 {
   opacity: 0;
@@ -126,60 +147,48 @@ main
   fill:#4ccbe0;
 }
 
-/*@import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700,300);
-
-*,html{margin:0;padding:0}
-
-//variables
-$baseColor : #e74c3c;
-$fontColor : #fff;
-
-body{
-  background: $baseColor;
-  text-align: center;
-  font-family: 'Comfortaa', cursive;
-}
-svg{
-  width: 100px;
-  height: 100px;
-  margin: 20px;
-  display:inline-block;
-}
-h1{
-  text-align: center;
-  color: $fontColor;
-  margin: 0 0 100px;
-  font-size: 34px;
-  font-weight: 100;
-  text-transform: uppercase;
-  background-color: darken($baseColor, 5);
-  padding: 20px 0;
-  b{
-    font-weight: 700;
-  }
-}
-
-//follow me template
-.made-with-love{
-  margin-top: 20px;
-  padding: 10px;
-  font-size: 10px;
-  font-family: arial;
+.main-container {
+  width: 100%;
+  height: 100%;
   color: #fff;
-  .i
-  {
-    font-style: normal;
-    color: #F50057;
-    font-size: 14px;
-    position: relative;
-    top: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
+.typewriter-text {
+  overflow: hidden;
+  position: relative;
+  width: 18em;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  font-size: 38px;
+  white-space: nowrap;
+
+  animation: typewriter 4s steps(44) 1s 1 normal both;
+
+}
+
+/*
+
+  animation-name: typewriter;
+  animation-duration: 4s;
+  animation-timing-function: steps(44);
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: both;
+
+*/
+
+
+@keyframes typewriter {
+  from {
+    width: 0;
   }
-  a{
-    color: #fff;
-    text-decoration: none;
-    &:hover{
-      text-decoration: underline;
-    }
+
+  to {
+    width: 18em;
   }
-}*/
+}
 
