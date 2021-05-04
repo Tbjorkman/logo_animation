@@ -4,21 +4,10 @@
     margin: 0;
     padding: 0;
 }
-body
-{
-    font-family: url('assets/EuroStyle_Normal.ttf');
-}
-main
-{
-  width: 100vw;
-  height:100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 .logoContent
 {
-  width: 30vw;
+  width: 50vw;
   height: auto;
 }
 .cls-1
@@ -54,10 +43,10 @@ main
 {
   position: absolute;
   top: 5rem;
-  opacity: 0;
-  animation: topFadeIn 1s 1.5s forwards;
+  opacity: 1;
+  /* animation: topFadeIn 1s 1.5s forwards; */
 }
-@keyframes topFadeIn
+/* @keyframes topFadeIn
 {
   0%
   { 
@@ -71,7 +60,7 @@ main
       top: 25%;
       opacity: 1;
   }
-} 
+}  */
 #one_bulb_line
 {
   opacity: 0;
@@ -121,7 +110,7 @@ main
   opacity: 0;
   animation: opacityShow 0.2s ease-in-out 3.6s forwards;
 }
-#companyName
+.logo_text
 {
   opacity: 0;
   animation: opacityShow 0.4s ease-in-out 3.8s forwards;
@@ -142,9 +131,16 @@ main
   stroke:#4ccbe0;
   stroke-miterlimit:10;
 }
-.cls-3,.cls-4,.cls-5
+.cls-2,.cls-3,.cls-4,.cls-5
 {
   fill:#4ccbe0;
+}
+.cls-2, .cls-3 {
+    stroke: #4ccbe0;
+    stroke-miterlimit: 10
+}
+.cls-3 {
+    stroke-width: 5px
 }
 
 .main-container {
@@ -157,38 +153,4 @@ main
   align-items: center; 
 }
 
-.typewriter-text {
-  overflow: hidden;
-  position: relative;
-  width: 18em;
-  border-right: 2px solid rgba(255, 255, 255, 0.75);
-  font-size: 38px;
-  white-space: nowrap;
-
-  animation: typewriter 4s steps(44) 1s 1 normal both;
-
-}
-
-/*
-
-  animation-name: typewriter;
-  animation-duration: 4s;
-  animation-timing-function: steps(44);
-  animation-delay: 1s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: both;
-
-*/
-
-
-@keyframes typewriter {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 18em;
-  }
-}
 

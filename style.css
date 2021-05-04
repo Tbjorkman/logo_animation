@@ -11,47 +11,123 @@ body
     display: flex;
     flex-wrap: wrap;
 }
-
-
+.preload
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    transition: opacity 6s 4s ease;
+}
+.preload-finish
+{
+    opacity: 0;
+    pointer-events: none;
+}
+#logo_frontloader 
+{
+    width: 30vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+h1
+{
+    font-size: large;
+    font-weight: 400;
+}
 /* Mobile first queries */
-
+h2
+{
+    font-size: medium;
+    font-weight: 300;
+}
 /* Larger than mobile */
 @media (max-width: 400px) {
 header 
 {
     width: 100vw;
     margin: 0;
+    padding: 5%;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    align-items:flex-start;
+    justify-content:left;
 }
+.nav_chevron
+{
+    width: 0.8em;
+    transition: transform .3s;
+}
+.rotate 
+{
+   transform: rotate(-90deg); 
+}
+.showNav
+{
+    display: block;
+    transition: max-height .5s ease-out; 
+}
+nav
+{
+    width: 100%;
+    height: auto;
+    display: none;
+
+}
+nav ul
+{
+   width: 80%;
+   height: 30vh;
+   margin-left: 10%;
+   z-index: 999;
+   position:absolute;
+}
+nav ul li 
+{
+    list-style: none;
+    background-color: rgba(255,255,255,0.7);
+}
+nav ul li a
+{
+    text-decoration: none;
+    color: #000;
+    line-height: 1.5em;
+}
+nav ul li a:hover
+{
+    color: #4cceb4;
+}   
 .video_camera img
 {
     width: 100vw;
     height: 25vh;
 }
-.slider_circles
+.video_and_circles
 {
-    width: 25vw;
-    margin-bottom: 3%;
-    height: auto;
+    width: 100vw;
+    height: 20vh;
+    margin: 0;
+    overflow: hidden;
     display: flex;
-    align-self: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
-.circle 
-{
-    background: #ffffff;
-    border: 1px solid #969696;
-    border-radius:50%;
-    height: 3px;
-    width: 3px;
+section {
+  height: 100%;
+  margin: 10% 0 0 0 ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.active
-{
-   border: 1px solid #000000;
-}
+
 #logo
 {
     margin: 30% 0 6% 1%;
@@ -64,7 +140,8 @@ header
 }
 main
 {
-    width: 94vw;
+    width: 100vw;
+    height: auto;
     display: flexbox;
     align-items: center;
     justify-content: space-around;
@@ -75,8 +152,9 @@ main
 }
 .containers
 {
-    width: 100vw;
+    width: 100%;
     height: auto;
+    margin: 10% 0 0 0;
     padding: 3%;
     display: flex;
     align-items: center;
@@ -114,7 +192,7 @@ button:active
 {
     width: 3em;
     height: 3em;
-    padding: 20%;
+    padding: 5%;
     margin: 1% 2% 1% 4%;  
 }
 .button-with-shadow
@@ -160,7 +238,7 @@ button:active
 .favorites
 {
     width: 100%;
-    height: auto;
+    height: 20vh;
     display: flex;
     align-content: center;
     justify-content: space-evenly;
@@ -169,6 +247,7 @@ button:active
 {
     width: 10vw;
     height: auto;
+    margin: 10%;
 }
 .lockButtons
 {
