@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>OnikHome</title>
+        <meta name="description" content="">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans&display=swap"
+            rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="logo_animation/logo_animation_style.css">
+        <link href="dist/hamburgers.css" rel="stylesheet">
+    </head>
+    <body">
+        <header>
+            <h4>Egnheder</h4>
+            <div id="clickMeNav" class="navTop">
+                <img class="nav_chevron" src="img/icon/down-chevron.svg">
+            </div>
+            <nav id="dropdown">
+                <ul>
+                    <li><a href="#">Sommerhus</a></li>
+                    <li><a href="#">Have</a></li>
+                    <li><a href="#">Cyklestativ</a></li>
+                    <li><a href="index.html">Min Bolig</a></li>
+                </ul>
+            </nav>
+
+        </header>
+        <main>
+            <section class="dimmerSwitch">
+                <div class="thermostat">
+                    <svg viewBox="0 0 200 200">
+                        <circle id="thermostatInColor" cx="100" cy="100" r="80"/>
+                        <circle id="innerCircle" cx="100" cy="100" r="72" />
+                        <circle id="temperatureIndicator" cx="38" cy="48" r="8" />
+                        <image id="powerButton" x="75" y="70" width="50" height="50" href="img\icon\on-off-button.svg"></image>
+                    </svg>
+                    
+                    <svg>
+                        <defs>
+                            <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#fff" />
+                                <stop offset="100%" stop-color="#4ccbe0" />
+                            </linearGradient>
+                        </defs>
+                        <filter id="insetShadow" x="-50%" y="-50%" width="200%" height="200%">
+                            <feComponentTransfer in=SourceAlpha>
+                                <feFuncA type="table" tableValues="1 0" />
+                            </feComponentTransfer>
+                            <feGaussianBlur stdDeviation="2" />
+                            <feOffset dx="2" dy="2" result="offsetblur" />
+                            <feFlood flood-color="rgba(0, 0, 0, 0.2)" result="color" />
+                            <feComposite in2="offsetblur" operator="in" />
+                            <feComposite in2="SourceAlpha" operator="in" />
+                            <feMerge>
+                                <feMergeNode in="SourceGraphic" />
+                                <feMergeNode />
+                            </feMerge>
+                        </filter>
+                    </svg>
+                </div>
+            </section>
+            <p>Er i gang med</p>
+            <section class="imprintedButtons">
+                <div class="borderShadow buttonImpressed">
+                    <button class="individualButtons">0</button>
+                </div>
+                <div class="borderShadow noShadow">
+                    <button class="individualButtons buttonEmbossed">0</button>
+                </div>
+                <div class="borderShadow buttonImpressed">
+                    <button class="individualButtons ">0</button>
+                </div>
+                <div class="borderShadow buttonEmbossed">
+                    <button class="individualButtons">0</button>
+                </div>
+                
+            </section>
+
+        </main>
+        <footer></footer>
+
+        <script src="js/main.js"></script>
+        <script src="js/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/Draggable.min.js"></script>
+        </body>
+
+</html>
