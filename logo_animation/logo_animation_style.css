@@ -19,7 +19,7 @@
 {
   stroke-dasharray: 2500;
    stroke-dashoffset: 2500;
-   animation: runLineHouse 1.2s ease-out forwards;
+   animation: runLineHouse 0.9s ease-in-out forwards;
 }
 @keyframes runLineHouse
 {
@@ -44,43 +44,27 @@
   position: absolute;
   top: 5rem;
   opacity: 1;
-  /* animation: topFadeIn 1s 1.5s forwards; */
 }
-/* @keyframes topFadeIn
-{
-  0%
-  { 
-    position: absolute;
-    top: -10rem;
-    opacity: 0;
-  }
-  100%
-  {
-      position: absolute;
-      top: 25%;
-      opacity: 1;
-  }
-}  */
 #one_bulb_line
 {
   opacity: 0;
-  animation: opacityShow 0.2s ease-in-out 2.2s forwards;
+  animation: opacityShow 0.2s ease-in-out 1.6s forwards;
 }
 #two_bulb_line
 {
   opacity: 0;
-  animation: opacityShow 0.2s ease-in-out 2.4s forwards;
+  animation: opacityShow 0.2s ease-in-out 1.7s forwards;
 }
 #three_bulb_line
 {
   opacity: 0;
-  animation: opacityShow 0.2s ease-in-out 2.6s forwards;
+  animation: opacityShow 0.2s ease-in-out 1.8s forwards;
 }
 #lightbulb
 {
   opacity: 0;
   transform-origin: center;
-  animation: opacityShow 0.2s ease-in-out 2.8s forwards, light_blink 1s ease-in-out 2.9s;
+  animation: opacityShow 0.2s ease-in-out 1.9s forwards, light_blink 1s ease-in-out 2s;
 }
 @keyframes light_blink
 {
@@ -93,27 +77,27 @@
 #wifi_center
 {
   opacity: 0;
-  animation: opacityShow 0.2s ease-in-out 3s forwards;
+  animation: opacityShow 0.2s ease-in-out 2.1s forwards;
 }
 #one_wifi_line
 {
   opacity: 0;
-  animation: opacityShow 0.2s ease-in-out 3.2s forwards;
+  animation: opacityShow 0.2s ease-in-out 2.2s forwards;
 }
 #two_wifi_line
 {
   opacity: 0;
-  animation: opacityShow 0.2s ease-in-out 3.4s forwards;
+  animation: opacityShow 0.2s ease-in-out 2.3s forwards;
 }
 #three_wifi_line
 {
   opacity: 0;
-  animation: opacityShow 0.2s ease-in-out 3.6s forwards;
+  animation: opacityShow 0.2s ease-in-out 2.4s forwards;
 }
 .logo_text
 {
   opacity: 0;
-  animation: opacityShow 0.4s ease-in-out 3.8s forwards;
+  animation: opacityShow 0.4s ease-in-out 2.5s forwards;
 }
 @keyframes opacityShow
 {
